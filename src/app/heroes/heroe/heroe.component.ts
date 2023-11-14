@@ -25,5 +25,10 @@ export class HeroeComponent {
     this.edad= 76
   }
 
+  restablecerHeroe(){
+    this.nombre="Goku"
+    this.edad=56
+  }
+
 }
 
