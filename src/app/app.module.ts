@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ContadorComponent } from './contador/contador.component';
 import { CentroComponent } from './centro/centro.component';
 import { HereoModule } from './heroes/heroe/components/heroe.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { HereoModule } from './heroes/heroe/components/heroe.module';
   ],
   imports: [
     BrowserModule,
-    HereoModule
+    HereoModule,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
