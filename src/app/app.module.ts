@@ -7,6 +7,7 @@ import { CentroComponent } from './centro/centro.component';
 import { HereoModule } from './heroes/heroe/components/heroe.module';
 import { DbzModule } from './dbz/dbz.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,ContadorComponent,CentroComponent
