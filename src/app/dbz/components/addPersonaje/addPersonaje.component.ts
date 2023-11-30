@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personajes.interface';
 
 @Component({
@@ -7,12 +7,18 @@ import { Personaje } from '../../interfaces/personajes.interface';
 })
 
 export class AddPersonajeComponent {
+  @Output()
+  public onNewPersonaje: EventEmitter<Personaje>=new EventEmitter();
   public personaje:Personaje={
     nombre:"",
     fuerza:0
   }
 
   public addPesonaje():void{
+    debugger;
     console.log(this.personaje)
+    if (this.personaje.nombre.length === 0) return;
+    this.onNewPersonaje.emit(this.personaje )
+    this.personaje={nombre:"",fuerza:null};
   }
 }

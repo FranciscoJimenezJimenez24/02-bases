@@ -1,4 +1,4 @@
 export interface Personaje{
   nombre:string;
-  fuerza:number;
+  fuerza:number | null;
 }

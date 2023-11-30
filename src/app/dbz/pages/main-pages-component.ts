@@ -25,4 +25,10 @@ export class MainPageComponent {
       fuerza:6000
     }
   ];
+
+  public onNewPersonaje(personaje:Personaje):void{
+    console.log("MainPage");
+    console.log(personaje);
+
+  }
 }
