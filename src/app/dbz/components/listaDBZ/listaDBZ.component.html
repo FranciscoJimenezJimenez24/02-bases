@@ -5,7 +5,7 @@
     let esPar=even;
     let esUltimo=last;
     let esPrimero=first"
-    class="list-group-item"
+    class="list-group-item d-flex justify-content-between align-items-center"
     [ngClass]="{
       'list-group-item-primary': esPrimero,
       'list-group-item-secondary': esPar,
@@ -15,5 +15,6 @@
     <strong>Fuerza: </strong>
     <span>{{personaje.fuerza}}</span>
     <span> - Índice: {{i}} - Es par: {{esPar}} - Es el último: {{esUltimo}}</span>
+    <button (click)="borrarPersonaje(i)" class="btn btn-danger">X</button>
   </li>
 </ul>

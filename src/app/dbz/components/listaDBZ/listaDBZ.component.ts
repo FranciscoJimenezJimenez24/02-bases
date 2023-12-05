@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 import { Personaje } from '../../interfaces/personajes.interface';
 
 @Component({
@@ -18,4 +18,11 @@ export class ListaDBZComponent {
       fuerza:0
     }
   ]
+  @Output()
+  public deletePersonaje:EventEmitter<number>=new EventEmitter();
+
+
+  public borrarPersonaje(index:number):void{
+    this.deletePersonaje.emit(index);
+  }
 }

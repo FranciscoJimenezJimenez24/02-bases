@@ -9,6 +9,7 @@ import { Personaje } from '../../interfaces/personajes.interface';
 export class AddPersonajeComponent {
   @Output()
   public onNewPersonaje: EventEmitter<Personaje>=new EventEmitter();
+
   public personaje:Personaje={
     nombre:"",
     fuerza:0
@@ -18,7 +19,7 @@ export class AddPersonajeComponent {
     debugger;
     console.log(this.personaje)
     if (this.personaje.nombre.length === 0) return;
-    this.onNewPersonaje.emit(this.personaje )
+    this.onNewPersonaje.emit(this.personaje)
     this.personaje={nombre:"",fuerza:null};
   }
 }
