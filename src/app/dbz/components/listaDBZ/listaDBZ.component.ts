@@ -10,19 +10,21 @@ export class ListaDBZComponent {
   @Input("miLista")
   public listaPersonajes:Personaje[]=[
     {
+      id:"",
       nombre:"Trunks",
       fuerza:7000
     },
     {
+      id:"",
       nombre:"Defaul",
       fuerza:0
     }
   ]
   @Output()
-  public deletePersonaje:EventEmitter<number>=new EventEmitter();
+  public deletePersonaje:EventEmitter<string>=new EventEmitter();
 
 
-  public borrarPersonaje(index:number):void{
-    this.deletePersonaje.emit(index);
+  public borrarPersonaje(id:string):void{
+    this.deletePersonaje.emit(id);
   }
 }

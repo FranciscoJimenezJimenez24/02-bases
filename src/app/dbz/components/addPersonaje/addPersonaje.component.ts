@@ -11,15 +11,16 @@ export class AddPersonajeComponent {
   public onNewPersonaje: EventEmitter<Personaje>=new EventEmitter();
 
   public personaje:Personaje={
+    id:"",
     nombre:"",
-    fuerza:0
+    fuerza:null
   }
 
   public addPesonaje():void{
     debugger;
     console.log(this.personaje)
-    if (this.personaje.nombre.length === 0) return;
+    //if (this.personaje.nombre.length === 0) return;
     this.onNewPersonaje.emit(this.personaje)
-    this.personaje={nombre:"",fuerza:null};
+    this.personaje={id:"",nombre:"",fuerza:null};
   }
 }
